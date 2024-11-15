@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fertilizer Prediction</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='fonts/icomoon/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/bootstrap.min.css')}}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/magnific-popup.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/jquery-ui.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/owl.carousel.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/owl.theme.default.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/aos.css')}}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/style.css') }}"
+    />
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <header class="site-navbar" role="banner">
+      <nav
+      class="site-navigation text-right text-md-center"
+      role="navigation"
+      style="
+        text-align: center !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 15px;
+      "
+    >
+      <div class="site-logo">
+        <a href="index.html" class="js-logo-clone"style="
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 2px;">Fartilizer-predict</a>
+      </div>
+        <div class="container">
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li>
+              <a href="{{ url_for('Home') }}">Home</a>
+            </li>
+            <li>
+              <!-- <a href="./about.html">About</a> -->
+              <a href="{{ url_for('Detail') }}">Details</a>
+            </li>
+
+            <li class="active">
+              <a href="{{ url_for('Model') }}">Model</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="{{ url_for('Home') }}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">About</strong></div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="site-section block-8">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 site-section-heading text-center pt-4">
+            <h2>Our Model</h2>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <a href="#"
+              ><img
+                src="{{ url_for('static', filename='/images/fertilizer.jpg') }}"
+                alt="Image placeholder"
+                class="img-fluid rounded"
+            /></a>
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <h2><a href="#">Crop Fertilizer Prediction Model</a></h2>
+            <p class="post-meta mb-4">
+              By <a href="#">Lawal Balikis</a>
+              <span class="block-8-sep">&bullet;</span> September 3, 2024
+            </p>
+            <p>
+              Our Crop Fertilizer Prediction Model leverages advanced machine
+              learning techniques, specifically Support Vector Machines (SVM),
+              to recommend optimal fertilizers based on soil characteristics.
+            </p>
+            <p><a href="{{ url_for('Model') }} " class="btn btn-primary btn-sm">Use Now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section border-bottom" data-aos="fade">
+      <div class="container">
+
+        <div class="site-section-heading pt-3 text-center mb-4">
+          <h2 class="text-black">Fertilizer Recommendation System</h2>
+        </div>
+      <div class="content">
+        <p>
+          The Fertilizer Recommendation System is a smart agricultural tool
+          designed to help farmers make informed decisions about the types and
+          quantities of fertilizers to use on their crops. By analyzing soil
+          data, crop types, and local weather conditions, this system provides
+          personalized fertilizer recommendations to optimize crop yield and
+          reduce input costs.
+        </p>
+        
+
+        <div class="site-section-heading pt-3 text-center  mb-4">
+          <h2 class="text-black">Key points used in projects are mention below:</h2>
+        </div>
+        <h4 class="text-black"> N (Nitrogen)</h4>
+          <p>
+            N (Nitrogen) : Nitrogen content in the soil. Nitrogen is really important for plant growth (structure), plant food processing (metabolism), and the creation of chlorophyll. Without enough nitrogen in the plant, the plant cannot grow taller, or produce enough food (usually yellow)
+          </p>
+          <h4 class="text-black"> P (Phosphorus)</h4>
+          <p>
+            P (Phosphorus) : Phosphorus content  in the soil. Phosphorus primary role in a plant is to store and transfer energy produced by photosynthesis for use in growth and reproductive processes. Soil P cycles in a variety forms in the soil 
+          </p>
+          <h4 class="text-black"> K (Potassium)</h4 >
+          <p>
+            K (Potassium) : Potassium content in the soil. Potassium is an essential nutrient for plant growth.
+          </p>
+          <h4 class="text-black">Temperature</h4 >
+          <p>
+            Temperature : Temperature in degree censius. High temperatures affect plant growth in numerous ways. The most obvious are the effects of heat on photosynthesis, in which plants use carbon dioxide to produce oxygen, and respiration, an opposite process in which plants use oxygen to produce carbon dioxide.
+          </p>
+          <h4 class="text-black">Humidity</h4 >
+          <p>
+            Humidity : Relative humidity in %. When conditions are too humid, it may promote the growth of mold and bacteria that cause plants to die and crops to fail, as well as conditions like root or crown rot. Humid conditions also invite the presence of pests, such as fungus gnats, whose larva feed on plant roots and thrive in moist soil.
+          </p>
+          <h4 class="text-black">moisture</h4 >
+          <p>
+          Soil moisture :  data helps to assess the water content in the soil, which directly impacts nutrient availability and crop health
+          </p>
+          <h4 class="text-black">Soil Type</h4 >
+          <p>
+            Soil type profoundly influences crop growth. Sandy soils offer good drainage but may lack nutrients, while clayey soils retain moisture but can become compacted. Loamy soils strike a balance, providing ideal conditions for most crops. Understanding and managing soil types is critical for optimizing crop health and yield.
+          </p>
+          <h4 class="text-black">Label</h4 >
+          <p>
+            Label : This is the output variable which contains 22 unique values i.e., 22 different crops and they are 
+                  1. '10-26-26'
+                  2. '14-35-14'
+                  3. '17-17-17'
+                  4. '20-20'
+                  5. '28-28'
+                  6. 'DAP'
+                  7. 'Urea'
+          </p>
+
+
+
+      </div>
+    </div>
+
+    
+
+    <footer class="site-footer border-top">
+      <div class="container">
+
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+
+             This project is created with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank" class="text-primary">Lawal Balikis</a>
+          
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+ 
+
+    <script  src="{{ url_for('static', filename='/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/jquery-3.3.1.min.js') }}"></script>
+    <script  src="{{ url_for('static', filename='/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/owl.carousel.min.js') }}"></script>
+    <script  src="{{ url_for('static', filename='/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/aos.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+    
+  </body>
+</html>

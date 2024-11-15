@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fertilizer Prediction</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"
+    />
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='fonts/icomoon/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/bootstrap.min.css')}}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/magnific-popup.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/jquery-ui.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/owl.carousel.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/owl.theme.default.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/aos.css')}}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="site-navbar" role="banner">
+        <nav
+          class="site-navigation text-right text-md-center"
+          role="navigation"
+          style="
+            text-align: center !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-left: 15px;
+          "
+        >
+          <div class="site-logo">
+            <a href="index.html" class="js-logo-clone"style="
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 2px;">Fartilizer-predict</a>
+          </div>
+          <div class="container">
+            <ul class="site-menu js-clone-nav d-none d-md-block">
+              <li>
+                <a href="{{ url_for('Home') }}">Home</a>
+              </li>
+              <li>
+                <a href="{{ url_for('Detail') }}">Details</a>
+              </li>
+
+              <li class="active">
+                <a href="{{ url_for('Model') }}">Model</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div
+        class="site-blocks-cover"
+        style="background-image: url(' {{ url_for('static', filename='/images/farm_background_1.jpg') }}');background-size:cover;    "
+        data-aos="fade"
+        style="height: 400px"
+      >
+        <div class="container">
+          <div
+            class="row align-items-start align-items-md-center justify-content-end"
+          >
+            <div class="col-md-12 text-center pt-5 pt-md-0">
+              <h1 class="mb-2">
+                Optimize Your Crop Yield with Smart Fertilizer Recommendations
+              </h1>
+              <div class="intro-text text-center">
+                <p class="mb-4">
+                  Harness the power of machine learning to ensure your soil gets
+                  the nutrients it needs.
+                </p>
+                <p>
+                  <a
+                    href="{{ url_for('Detail') }} "
+                    class="btn btn-sm btn-primary"
+                    >See More</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section block-3 site-blocks-2 bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+              <h2>Key Features</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section site-section-sm site-blocks-1">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+              data-aos="fade-up"
+              data-aos-delay=""
+            >
+              <div class="icon mr-4 align-self-start">
+                <span class="icon-truck"></span>
+              </div>
+              <div class="text">
+                <h2 class="text-uppercase">Data-Driven Insights</h2>
+                <p>
+                  The model analyzes important soil properties such as pH,
+                  nitrogen, phosphorus, and potassium levels to determine the
+                  best fertilizer type for maximizing crop yield.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon mr-4 align-self-start">
+                <span class="icon-refresh2"></span>
+              </div>
+              <div class="text">
+                <h2 class="text-uppercase">User-Friendly</h2>
+                <p>
+                  Designed for farmers and agricultural professionals, the model
+                  simplifies the decision-making process, ensuring that the
+                  right nutrients are applied for improved crop health and
+                  productivity.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon mr-4 align-self-start">
+                <span class="icon-help"></span>
+              </div>
+              <div class="text">
+                <h2 class="text-uppercase">Predictive Accuracy</h2>
+                <p>
+                  By utilizing historical data and advanced algorithms, our
+                  model offers reliable predictions, helping users achieve
+                  better farming outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section site-blocks-2">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay=""
+            >
+              <a class="block-2-item" href="#">
+                <figure class="image">
+                  <img
+                    src="{{ url_for('static', filename='/images/o1.png') }}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </figure>
+                <div class="text">
+                  <span class="text-uppercase">Crop Types and Fertilizer</span>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay="100"
+            >
+              <a class="block-2-item" href="#">
+                <figure class="image">
+                  <img
+                    src="{{ url_for('static', filename='/images/o2.png') }}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </figure>
+                <div class="text">
+                  <span class="text-uppercase">Crop Types and Fertilizer</span>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
+              <a class="block-2-item" href="#">
+                <figure class="image">
+                  <img
+                    src="{{ url_for('static', filename='/images/o3.png') }}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </figure>
+                <div class="text">
+                  <span class="text-uppercase">Crop Types and Fertilizer</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section block-3 site-blocks-2 bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+              <h2>Photos OF Farmers</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="nonloop-block-3 owl-carousel">
+                <div class="item">
+                  <div class="block-4 text-center">
+                    <figure class="block-4-image">
+                      <img
+                        src="{{ url_for('static', filename='/images/f1.webp') }}"
+                        alt="Image placeholder"
+                        class="img-fluid"
+                        style="height: 335px"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="block-4 text-center">
+                    <figure class="block-4-image">
+                      <img
+                        src="{{ url_for('static', filename='/images/f2.jpeg') }}"
+                        alt="Image placeholder"
+                        class="img-fluid"
+                        style="height: 335px"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="block-4 text-center">
+                    <figure class="block-4-image">
+                      <img
+                        src="{{ url_for('static', filename='/images/f3.png') }}"
+                        alt="Image placeholder"
+                        class="img-fluid"
+                        style="height: 335px"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="block-4 text-center">
+                    <figure class="block-4-image">
+                      <img
+                        src="{{ url_for('static', filename='/images/f4.jpg') }}"
+                        alt="Image placeholder"
+                        class="img-fluid"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="block-4 text-center">
+                    <figure class="block-4-image">
+                      <img
+                        src="{{ url_for('static', filename='/images/background.jpg') }}"
+                        alt="Image placeholder"
+                        class="img-fluid"
+                      />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section block-8">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+              <h2>Our Model</h2>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-12 col-lg-7 mb-5">
+              <a href="#"
+                ><img
+                  src="{{ url_for('static', filename='/images/fertilizer.jpg') }}"
+                  alt="Image placeholder"
+                  class="img-fluid rounded"
+              /></a>
+            </div>
+
+            <div class="col-md-12 col-lg-5 text-center pl-md-5">
+              <h2><a href="#">Crop Fertilizer Prediction Model</a></h2>
+              <p class="post-meta mb-4">
+                By <a href="#">Lawal Balikis</a>
+                <span class="block-8-sep">&bullet;</span> September 3, 2024
+              </p>
+              <p>
+                Our Crop Fertilizer Prediction Model leverages advanced machine
+                learning techniques, specifically Support Vector Machines (SVM),
+                to recommend optimal fertilizers based on soil characteristics.
+              </p>
+              <p>
+                <a href="{{ url_for('Model') }} " class="btn btn-primary btn-sm"
+                  >Use Now</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="site-footer border-top">
+        <div class="container">
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <p>
+                This project is created with
+                <i class="icon-heart" aria-hidden="true"></i> by
+                <a href="#" target="_blank" class="text-primary"
+                  >Lawal Balikis</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/aos.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+  </body>
+</html>
